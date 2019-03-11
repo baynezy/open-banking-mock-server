@@ -1,0 +1,9 @@
+version: '3'
+services: 
+  ob_mock_server:
+    build:
+      context: .
+      args:
+        TAG_VERSION: v0.8.0
+    ports: 
+     - 8001:8001
