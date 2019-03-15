@@ -1,9 +1,13 @@
-version: '3'
+version: '3.2'
 services: 
   ob_mock_server:
     build:
       context: .
       args:
         TAG_VERSION: v0.8.0
+    volumes:
+      - type: bind
+        source: ./data
+        target: /data
     ports: 
      - 8001:8001
